@@ -4,4 +4,3 @@ class OddspediaAnalyser:
 
     def get_initialisation_string(self):
         return self._initialisation_string
-    

@@ -1,8 +1,17 @@
 import unittest
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+from ..units.oddspedia_analyser import OddspediaAnalyser
 
-if __name__ == '__main__':
+
+class OddspediaAnalyserTester(unittest.TestCase):
+    oddspedia_analyser = OddspediaAnalyser()
+
+    def test_initialisation_string(self):
+        self.assertEqual(
+            "Oddspedia Analyser initialising",
+            self.oddspedia_analyser.get_initialisation_string(),
+        )
+
+
+if __name__ == "__main__":
     unittest.main()
