@@ -9,3 +9,7 @@ automatically format all files using black, simply run this in the root of the r
 black .
 ``````
 Note that this only formats Python files.
+
+### Additional Conventions
+In addition to the conventions described in PEP-8, the below practices are also followed:
+- For testing a class called `MyClass`, a unit test class called `MyClassTester` is created
