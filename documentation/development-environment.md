@@ -11,16 +11,16 @@ fetch and analyse web content.
 More specifically, Python 3.12 is being used as it was the latest released version when the project started.
 
 The easiest way to install a specific version of Python is to use the deadsnakes PPA:
-``````
+```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 sudo apt-get install python3.12
-``````
+```
 This does not replace the existing Python version installed on your system, so to specifically use this version of 
 Python, run:
-``````
+```
 python3.12 some_python_file.py
-``````
+```
 
 ### Code Editor
 While any code editor can be used for development, the configuration files committed to this repository make PyCharm a 
@@ -40,6 +40,6 @@ Alternatively, the virtual environment can also be setup through the terminal as
 [venv documentation](https://docs.python.org/3/library/venv.html).
 
 Once you are inside the virtual environment, all necessary libraries and tools can be installed using:
-``````
+```
 pip install -r requirements.txt
-``````
+```

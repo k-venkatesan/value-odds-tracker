@@ -13,9 +13,9 @@ If the issue is a new feature or a bug, give it an appropriate title, descriptio
 To address a specific requirement within a broader feature, a user story needs to be created. This is an 
 issue with the user story label, and title in the following format:
 
-``````
+```
 [Person] wants [requirement] to [reason].
-``````
+```
 (The exact wording can deviate from the template if it improves readability).
 
 Use ones of the following personas to provide the appropriate point of view for the user story:
