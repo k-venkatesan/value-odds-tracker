@@ -1,6 +1,8 @@
 import unittest
 
-from system.components.model.units.oddspedia_analyser import OddspediaAnalyser
+from system.components.value_odds_aggregator.units.oddspedia_analyser import (
+    OddspediaAnalyser,
+)
 
 
 class OddspediaAnalyserTester(unittest.TestCase):

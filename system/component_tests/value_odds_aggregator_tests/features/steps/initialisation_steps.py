@@ -1,7 +1,9 @@
 from behave import given, then
 from system.component_tests.utilities.assertion_helpers import assertEqual
 
-from system.components.model.units.oddspedia_analyser import OddspediaAnalyser
+from system.components.value_odds_aggregator.units.oddspedia_analyser import (
+    OddspediaAnalyser,
+)
 
 
 @given("the Oddspedia Analyser")
