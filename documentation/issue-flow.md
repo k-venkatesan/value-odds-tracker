@@ -1,10 +1,10 @@
 # Issue Flow
 
 All development in the project is handled through issues on 
-[Github](https://github.com/k-venkatesan/value-odds-tracker/issues).
+[GitHub](https://github.com/k-venkatesan/value-odds-tracker/issues).
 
 ### Creating a New Issue
-A new issue can be created on Github by simply clicking the 'New issue' button.
+A new issue can be created on GitHub by simply clicking the 'New issue' button.
 
 #### Feature/Bug
 If the issue is a new feature or a bug, give it an appropriate title, description and feature/bug label. 
