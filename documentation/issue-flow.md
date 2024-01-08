@@ -35,6 +35,7 @@ To work on a user story that has been created:
 1. Once the branch has been created, create a pull request to merge that branch into 'main' - give the pull request the 
 same title as the user story
 1. When changes are ready to be merged into the main branch, use the 'Squash and merge' button provided in the pull 
-request.
+request - use the default commit message if prompted
+1. After a successful merge, delete the branch that was created for the user story 
 
 The branch can now be checked out locally to implement changes.
