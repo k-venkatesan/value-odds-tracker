@@ -16,10 +16,14 @@ jobs:
   unit-tests:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
           cache: 'pip'
-      - run: pip install -r requirements.txt
-      - run: python -m unittest system/components/value_odds_aggregator/unit_tests/*.py
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run unit tests for component Value Odds Aggregator
+        run: python -m unittest system/components/value_odds_aggregator/unit_tests/*.py
