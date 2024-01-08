@@ -10,7 +10,7 @@ class OddspediaAnalyserTester(unittest.TestCase):
 
     def test_initialisation_string(self):
         self.assertEqual(
-            "Oddspedia Analyser initialisin",
+            "Oddspedia Analyser initialising",
             self.oddspedia_analyser.get_initialisation_string(),
         )
 
