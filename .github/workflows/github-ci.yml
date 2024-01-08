@@ -1,8 +1,7 @@
 name: GitHub Continuous Integration
 on: [push]
 jobs:
-
-  code-formatting:
+  code-format-check:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
