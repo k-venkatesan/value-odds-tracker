@@ -22,3 +22,17 @@ If only the tests of a single feature file are to be run, this can be done using
 ```
 behave -i /path/to/features/specific_feature.feature
 ```
+
+### Generating Coverage Reports
+Coverage reports can be generated using the [coverage.py](https://coverage.readthedocs.io/en/7.4.0/) tool. To execute a 
+component test with coverage measurement enabled, append `coverage -m` to the start of the feature file 
+execution with `behave`. For example:
+```
+coverage -m behave /path/to/features
+```
+To then view the coverage report, simply run:
+```
+coverage report
+```
+Special include/exclude rules for coverage can be configured in the pyproject.toml file. The coverage.py documentation 
+describes these in further detail, along with a variety of options for generating reports.

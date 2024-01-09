@@ -1,5 +1,8 @@
 name: GitHub Continuous Integration
 on: [push]
+env:
+  UNIT_TEST_SOURCES: system/components/*/unit_tests/*.py
+  COMPONENT_TEST_FEATURE_FILES: system/component_tests/*/features/
 jobs:
   code-format-check:
     runs-on: ubuntu-22.04
@@ -28,5 +31,24 @@ jobs:
           cache: 'pip'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Run unit tests for component Value Odds Aggregator
-        run: python -m unittest system/components/value_odds_aggregator/unit_tests/*.py
+      - name: Run unit tests with coverage
+        run: coverage run -m unittest ${UNIT_TEST_SOURCES}
+      - name: Generate code coverage report
+        run: coverage report -m
+
+  component-tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run component tests with coverage
+        run: coverage run -m behave ${COMPONENT_TEST_FEATURE_FILES}
+      - name: Generate code coverage report
+        run: coverage report -m

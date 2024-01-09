@@ -1,0 +1,5 @@
+[tool.coverage.run]
+include = [
+    # all production code
+    "*/units/*",
+    ]

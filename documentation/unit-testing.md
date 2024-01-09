@@ -15,4 +15,20 @@ Alternatively, the unit test file can be created from scratch with the following
 ### Running Unit Tests
 With PyCharm, simply right-click the unit test file and select 'Run Python tests in ...'. 
 
-Alternatively, it can be run from the terminal by executing `python -m unittest /path/to/file.py`.
+Alternatively, it can be run from the terminal by executing:
+```
+python -m unittest /path/to/file.py`
+```
+
+### Generating Coverage Reports
+Coverage reports can be generated using the [coverage.py](https://coverage.readthedocs.io/en/7.4.0/) tool. To execute a 
+unit test with coverage measurement enabled, replace `python` with `coverage` while running it:
+```
+coverage -m unittest /path/to/file.py
+```
+To then view the coverage report, simply run:
+```
+coverage report
+```
+Special include/exclude rules for coverage can be configured in the pyproject.toml file. The coverage.py documentation 
+describes these in further detail, along with a variety of options for generating reports.

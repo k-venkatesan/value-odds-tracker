@@ -1,3 +1,4 @@
 pip==23.3.2
 black==23.12.1
 behave==1.2.6
+coverage==7.4.0
