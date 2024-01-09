@@ -1,5 +1,7 @@
 name: GitHub Continuous Integration
 on: [push]
+env:
+  COMPONENT_TEST_FEATURE_FILES: system/component_tests/*/features/
 jobs:
   code-format-check:
     runs-on: ubuntu-22.04
@@ -44,6 +46,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run component tests with coverage
-        run: coverage run --source=system/components/value_odds_aggregator/units -m behave system/component_tests/*/features/
+        run: coverage run -m behave ${COMPONENT_TEST_FEATURE_FILES}
       - name: Generate code coverage report
         run: coverage report -m
