@@ -43,5 +43,9 @@ jobs:
           cache: 'pip'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Run component tests for component Value Odds Aggregator
-        run: behave system/component_tests/value_odds_aggregator_tests/features
+      - name: Run component tests with coverage
+        run: coverage run --source=system/components/value_odds_aggregator/units -m behave system/component_tests/*/features/
+      - name: Generate coverage report
+        run: coverage report -m
+      - name: Create HTML report
+        run: coverage html
