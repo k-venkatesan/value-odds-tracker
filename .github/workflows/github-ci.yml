@@ -45,12 +45,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run component tests with coverage
         run: coverage run --source=system/components/value_odds_aggregator/units -m behave system/component_tests/*/features/
-      - name: Generate plain text code coverage report
+      - name: Generate code coverage report
         run: coverage report -m
-      - name: Generate HTML code coverage report
-        run: coverage html
-      - name: Upload HTML report as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: code-coverage-report
-          path: htmlcov/index.html
